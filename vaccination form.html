@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <title> Form in html></title>
+</head>
+
+<body style="background-color:powderblue">
+    <h2>
+        <p style="color:red">
+            <style>
+                body {
+                    height: 200px;
+                    background-image: url(vaccinebg.jpg);
+                    background-size: cover;
+                }
+
+                .center {
+                    margin: auto;
+                    width: 36%;
+                    padding: 10px;
+                }
+
+                .timage {
+                    border-radius: 20px;
+                }
+
+                .center {
+                    /* justify-content: center; */
+                    /* border: 2px solid black; */
+                    /* text-align: center; */
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 13px;
+                    text-shadow: rgb(136, 39, 139);
+                    border: salmon;
+                    position: relative;
+                    right: 130px;
+                    top: 30px;
+                    /* border:1px solid black ; */
+                    box-shadow: 3px 3px 10px black;
+
+                }
+                .sbtn{
+                    background-color: rgb(40, 138, 230);
+                    padding:5px 40px;
+                    border: none;
+                    color: rgb(44, 27, 27);
+                    border-radius:10px ;
+                    box-shadow: 3px 3px 10px black;
+                    font-weight: 700;
+                    cursor: pointer;
+
+                }
+                .sbtn:hover{
+                    opacity: 0.8;
+                }
+            </style>
+            <!-- <div class="center"
+            style="position: absolute; top: 20px; right:800px; border: black; font-family:Verdana, Geneva, Tahoma, sans-serif ; font-size: 13px;text-shadow:rgb(136, 39, 139) ; border: salmon;">
+            <div style="position: absolute;font-size: 25px;font-family:'Courier New', Courier, monospace;"></div> -->
+        <div class="center">
+            <img class="timage" src="vaccinepic.jpg" alt="Vaccination">
+            <br><br>Enter your name</br></br>
+            <input type="text" name="username"><br>
+            <br>Enter your age</br></br>
+            <input type="number" name="user age"><br>
+            <br><label type="gender">Gender:</label>
+            <input type="radio" id="gender" name="gender" value="male" />Male
+            <input type="radio" id="gender" name="gender" value="female" />Female
+            <input type="radio" id="gender" name="gender" value="others" />Others
+            <br />
+            <br>
+            <label type="vaccine prefernce">Vaccine prefernce:</label>
+            <input type="radio" id="vaccine prefernce" name="vaccine prefernce" value="covaxin" />Covaxin
+            <input type="radio" id="vaccine prefernce" name="vaccine prefernce" value="covishield" />Covishield
+            <input type="radio" id="vaccine preference" name="vaccine preference" value="sputnik" />Sputnik
+            <br />
+            <br>
+            <label type="book appointment">Book appointment:</label>
+            <input type="radio" id="book appointment" name="book appointment" value="9am-11am" />9am-11am
+            <input type="radio" id="book appointment" name="book appointment" value="12pm-2pm" />12pm-2pm
+            <input type="radio" id="book appointment" name="book appointment" value="3pm-5pm" />3pm-5pm
+            <br />
+            <br><label type="verification document">Verification Document:</label>
+            <input type="radio" id="verification document" name="verification document" value="Aadhar Card" />Aadhar
+            Card
+            <input type="radio" id="verification document" name="verification document" value="PAN Card" />PAN Card
+            <input type="radio" id="verification document" name="verification document" value="Voter ID" /> Voter ID
+            <br />
+            <br><input class="sbtn" type="submit" value="SUBMIT" >
+    </h2>
+    </p>
+    </div>
+    </div>

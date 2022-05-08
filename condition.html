@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .form1 {
+            /* background-color: aqua; */
+            text-align: center;
+            margin: 30px 140px;
+            background: linear-gradient(rgb(168, 246, 255), white);
+            padding: 30px;
+        }
+
+        .main1 {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            /* margin-left: 100px; */
+        }
+
+        /* .row1 {
+            padding: 40px;
+        } */
+
+        .row1 p {
+            margin: 50px;
+        }
+
+        /* .row2 {
+            padding: 40px;
+        } */
+
+        .row2 p {
+            margin: 50px;
+        }
+
+        .sbtn {
+            padding: 10px 100px;
+            background-color: transparent;
+            color: rgb(97, 97, 255);
+            font-weight: 700;
+            border: 2px solid rgb(97, 97, 255);
+            font-size: 15px;
+        }
+
+        .sbtn:hover {
+            background-color: rgb(97, 97, 255);
+            color: white;
+        }
+
+        p {
+            font-weight: 600;
+        }
+
+        input {
+            padding: 4px 30px;
+            border: 2px solid gray;
+            /* box-shadow: 2px 2px 10px grey; */
+        }
+
+        .head {
+            margin-left: 120px;
+        }
+
+        .head a {
+            text-decoration: none;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 0px 20px;
+            font-weight: 600;
+        }
+
+        .head a button {
+            font-size: 15px;
+            border: 2px solid blue;
+            padding: 5px 15px;
+            cursor: pointer;
+            background-color: transparent;
+            color: blue;
+        }
+
+        .head a button:hover {
+            /* opacity: 0.7; */
+            /* border: 2px solid blue; */
+            background-color: blue;
+            color: white;
+        }
+
+        .head i {
+            padding-right: 5px;
+        }
+
+        span {
+            color: blue;
+        }
+
+        .kanha {
+            color: red;
+            background-color: aqua;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <p id="normal"></p>
+    <p id="medium"></p>
+    <p id="danger"></p>
+
+
+    <script>
+        function validate() {
+            var age = document.getElementById("Age").value;
+            var bp = document.getElementById("Bp").value;
+            var sugar = document.getElementById("Sugar").value;
+            var oxygen = document.getElementById("Oxygen").value;
+            var allergy = document.getElementById("Allergy").value;
+            var temperature = document.getElementById("Temp").value;
+
+            if (age > 18) {
+                if (bp > 90 && bp < 120) {
+                    document.write('<h3 style="color:green;font-family: Arial, Helvetica, sans-serif;text-align:center;">BP = Normal , All good </h3>')
+                    document.write("<br>")
+
+
+                } else if (bp < 90 && bp > 1) {
+                    document.write('<h3 style="color:#FF6347;font-family: Arial, Helvetica, sans-serif;text-align:center;">BP = Low BP, You need to consult a doctor immediately </h3>')
+                    document.write("<br>")
+                } else {
+                    document.write('<h3 style="color:#FF0000;font-family: Arial, Helvetica, sans-serif;text-align:center;">BP = High BP, You need to consult a doctor </h3>')
+                    document.write("<br>")
+                }
+
+                if (sugar < 99 && sugar > 1) {
+                    document.write('<h3 style="color:green;font-family: Arial, Helvetica, sans-serif;text-align:center;">Sugar = Normal , All good </h3>')
+                    document.write("<br>")
+                } else if (sugar > 100 && sugar < 125) {
+                    document.write('<h3 style="color:#FF6347;font-family: Arial, Helvetica, sans-serif;text-align:center;">Sugar = Medium Pre-diabites, You need to consult a doctor </h3>')
+                    document.write("<br>")
+                } else {
+                    document.write('<h3 style="color:#FF0000;font-family: Arial, Helvetica, sans-serif;text-align:center;">Sugar = Danger Diabites, You need to consult a doctor immediately </h3>')
+                    document.write("<br>")
+                }
+
+                if (oxygen > 96 && oxygen < 100) {
+                    document.write('<h3 style="color:green;font-family: Arial, Helvetica, sans-serif;text-align:center;">Oxygen =  Normal , All good </h3>')
+                    document.write("<br>")
+                } else if (oxygen > 80 && oxygen < 85) {
+                    document.write('<h3 style="color:#FF6347;font-family: Arial, Helvetica, sans-serif;text-align:center;">Oxygen = Medium Brain Gills affected, You need to consult a doctor</h3>')
+                    document.write("<br>")
+                } else if (oxygen < 67 && oxygen > 1) {
+                    document.write('<h3 style="color:#FF0000;font-family: Arial, Helvetica, sans-serif;text-align:center;">Oxygen = Danger Cyanosis, You need to consult a doctor immediately</h3>')
+                    document.write("<br>")
+                } else {
+                    document.write('<h3 font-family: Arial, Helvetica, sans-serif;text-align:center;">Enter proper Oxygen level</h3>')
+                    document.write("<br>")
+                }
+
+                if (temperature > 1 && temperature < 100  ) {
+                    document.write('<h3 style="color:green;font-family: Arial, Helvetica, sans-serif;text-align:center;">Temperature = Normal , All good </h3>')
+                    document.write("<br>")
+                } else if (temperature == 100) {
+                    document.write('<h3 style="color:#FF6347;font-family: Arial, Helvetica, sans-serif;text-align:center;">Temperature = Medium Fever, You need to consult a doctor</h3>')
+                    document.write("<br>")
+                } else if (temperature > 103 && temperature < 105) {
+                    document.write('<h3 style="color:#FF0000;font-family: Arial, Helvetica, sans-serif;text-align:center;">Temperature = Danger High Fever, You need to consult a doctor immediately</h3>')
+                    document.write("<br>")
+                } else {
+                    document.write('<h3 style="color:#FF0000;font-family: Arial, Helvetica, sans-serif;text-align:center;>Temperature = Very High Fever</h3>')
+                    document.write("<br>")
+                }
+            }
+        }
+        
+    </script>
+
+
+
+    <div class="main">
+        <h2>Quick <span> Health</span> Checkup</h2>
+        <div class="head">
+
+            <a href="menupg.html"><button><i class="fa-regular fa-address-card"></i>Menu Page</button></a>
+            <a href="dspecial.html"><button><i class="fa-regular fa-circle-question"></i>Doctors
+                    Appointment</button></a>
+        </div>
+        <form class="form1" name="healthForm" action="" onsubmit="validate()">
+            <span id="error1"></span> <br>
+
+
+            <p>Enter Your Age <br><br><input type="text" id="Age" value="" placeholder="Enter Age" required></p>
+            <div class="main1">
+                <div class="row1">
+                    <p>Enter Your Blood Pressure <br><br><input type="text" id="Bp" value="" name="bp"
+                            placeholder="Enter Bp" required></p>
+                    <p>Enter Your Sugar Level <br><br><input type="text" id="Sugar" value="" name="sugar"
+                            placeholder="Enter Sugar Level" required></p>
+                    <p>Enter Your SPO2 Level <br><br><input type="text" id="Oxygen" value="" name="oxygen"
+                            placeholder="Enter SPO2 Level" required></p>
+                </div>
+                <div class="row2">
+                    <p>Enter Your Allergy <br><br><input type="text" id="Allergy" value="" name="allergy"
+                            placeholder="Enter Yes or No" required></p>
+                    <p>Enter Your Body Temperature (°F) <br><br><input type="text" id="Temp" value="" name="temp"
+                            placeholder="Enter Temperature" required></p>
+                    <p>Enter Your Oxygen <br><br><input type="text" id="Oxygen" value="" name="bp"
+                            placeholder="Enter Bp" required></p>
+                </div>
+                <!-- <div class="row3">
+                    <p>Enter Your Oxygen <br><input type="text" id="Oxygen" value=""></p>
+                    <p>Enter Your Oxygen <br><input type="text" id="Oxygen" value=""></p>
+                </div> -->
+            </div>
+
+            <input class="sbtn" type="submit" value="Run a Health Check" />
+
+        </form>
+    </div>
+</body>
+
+</html>
